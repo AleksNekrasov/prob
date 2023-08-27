@@ -12,7 +12,7 @@ int main()
     std::string word = "Voldemort";
     std::string newWord = "You";
 
-    std::string result = " ";
+    std::string result = "";
 
     for (int startPos = 0; startPos < text.length(); startPos++)
     {
@@ -30,8 +30,8 @@ int main()
         {
             result += text[startPos];
         }
-        else                   // ТУТ Я НЕ ПОЙМУ, ПО МОЕЙ ЛОГИКЕ СРАБАТЫВАЕТ УСЛОВИЕ   word[i] = text[i+startPos]    соответственно цикл нашел V и тут же переписывает ВСЕ СЛОВО??
-        {                      // поясните пожалуйста, где я ошибся в расчетах... где он прогоняет все слово на соответствие?
+        else                   // ТУТ ПРИ УСПЕШНОМ ПРОГОНЕ ВНУТРЕННЕГО ЦИКЛА К РЕЗУЛЬТАТУ ПРИППИСЫВАЕТСЯ НУЖНОЕ НАМ СЛОВО
+        {                      
             result += newWord;
             startPos += word.length() - 1;
 
